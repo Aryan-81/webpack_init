@@ -4,7 +4,7 @@
   "description": "This repo demonstrates the basic setup of a web development environment using Webpack. It includes configuration files and dependencies to get you started with bundling your JavaScript, CSS, and other assets.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm -y init && npm i -D webpack wepack-cli && npm i -D sass style-loader css-loader sass-loader && npm i -D html-webpack-plugin && npm i -D babel-loader @babel/core @babel/preset-env && npm install -D webpack-dev-server && npm i -D webpack-bundle-analyzer",
+    "postinstall": "npm -y init && npm i -D webpack webpack-cli sass style-loader css-loader sass-loader html-webpack-plugin babel-loader @babel/core @babel/preset-env webpack-dev-server webpack-bundle-analyzer @babel/preset-react",
     "build": "webpack",
     "dev": "webpack serve"
   },
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
     "babel-loader": "^9.1.3",
     "css-loader": "^7.1.1",
     "html-webpack-plugin": "^5.6.0",
