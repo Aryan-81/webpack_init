@@ -1,0 +1,91 @@
+
+* {
+    box-sizing: border-box;
+  }
+  :root {
+      --main-color: #20338b;
+      --blue-theme-color1: #ffffff;
+      --nav-height:70px;
+      margin: 0;
+      /* Define a variable named --main-color and set its value to red */
+  }
+  
+  
+  body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+  }
+  .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    width: 100%;
+  }
+  #head-background{
+    position: absolute; 
+    left: 0;
+    height: 35%;
+    width: 100%;
+    filter: brightness(40%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  .head h1 {
+    margin: 0;
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #ffffff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 15vh;
+    line-height: 1.2em;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  }
+  .content{
+    min-height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(154, 154, 154);
+  }
+  ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border: 1px solid transparent;
+      background-clip: content-box;
+      background-image: linear-gradient(180deg, #62009f 0%, #009483 99%);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background-image: linear-gradient(180deg, #5a456796 0%, #44625d95 99%);
+    }
+  
+    @media only screen and (max-width: 768px) {
+      .head h1 {
+        font-size: 16vw;
+      }
+   }
+  
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
