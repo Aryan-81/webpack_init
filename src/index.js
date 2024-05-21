@@ -1,8 +1,8 @@
-import text from "./text.js"
-import './styles/main.scss'
-import imgg from './assets/download.jpeg'
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-
-const clg_img = document.getElementById('head-background')
-clg_img.style.backgroundImage = `url('${imgg}')`;
-console.log(text());
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(
+        <App />
+);
